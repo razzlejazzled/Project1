@@ -4,7 +4,7 @@ $("#searchBtn").on("click", function (e) {
     e.preventDefault();
     $("#page2").attr("style", "display: block");
     $("#page1").attr("style", "display: none");
-    let returnButton = $("<button>").attr("class", "btn").append("Back");
+    let returnButton = $("<button>").attr("class", "blue-grey darken-1 btn").append("Back");
     $("#returnBtn").append(returnButton);
     if ($("#textarea1").val() > 0){
         searchTerm = $("#textarea1").val()
@@ -123,9 +123,9 @@ function weatherQuery(searchTerm) {
             var cardtemp = $("<p>")
             var iconAppend = $("<div>")
             iconAppend.attr("class", "car-text").append("<img src = 'http://openweathermap.org/img/wn/" + icon + "@2x.png'></img>")
-            cardtemp.text("Temperature: " + temp)
+            cardtemp.text("Temp: " + temp + " Degrees")
             var cardhumid = $("<p>")
-            cardhumid.text("Humidity: " + humid)
+            cardhumid.text("Humidity: " + humid + "%")
             card1.append(City, cardtemp, cardhumid, iconAppend)
             card.append(card1)
             $("#weather").append(card)
