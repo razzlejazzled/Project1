@@ -39,7 +39,7 @@ Button {
     margin-right: 200px;
     width: 60px;
     height: 60px;
-    background-color: rgb(0, 128, 255);
+    background-color: rgb(45, 112, 156);
 }
 h2 {
     font-family: 'IM Fell Great Primer SC', serif;
@@ -54,10 +54,18 @@ h2 {
 }
 .btn {
     margin-left: 200px;
+    width: 70px;
 }
 .brickBackground {
     background-image: url("https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+}
+img {
+    width: 50px;
+    height: 49px;
+}
+.material-icons {
+    color: white;
 }
