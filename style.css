@@ -1,0 +1,63 @@
+.BarrelBackGround {
+    background-image: url("https://images.unsplash.com/photo-1535419342184-f4bd555a3c73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+#img1 {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+.input1 {
+    width: 100px;
+}
+body {
+    background-image: url("https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.bg-white {
+    background-color: white;
+}
+#header {
+    color: white;
+    margin-top: 50px;
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+#header2 {
+    color: white;
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+#header3 {
+    color: white;
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+Button {
+    margin-top: 14px;
+    margin-right: 200px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(0, 128, 255);
+}
+h2 {
+    font-family: 'IM Fell Great Primer SC', serif;
+    color: white;
+}
+.weWillSee {
+    margin-top: 75px;
+}
+.dude {
+    overflow: scroll;
+    height: 350px;
+}
+.btn {
+    margin-left: 200px;
+}
+.brickBackground {
+    background-image: url("https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
