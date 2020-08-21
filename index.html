@@ -1,19 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+  <body>
+ <div id = "page1" class = "center-align container">
+  <div class = "row">
+   <div class = col-s1-12>
+    <div class = "row">
+     <h1 id = "header">Hops & Hounds</h1>
+    </div> 
+    <div class = "row">
+     <img id = "img1" src="https://media.istockphoto.com/vectors/cute-german-shepherd-puppy-waiting-to-be-adopted-vector-id627679670" alt="Cute Puppers">
+    </div>  
+    <div class="row">
+        <div class="col s6  m4 offset-m3 offset-s2">
+            <div class="bg-white input-field">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Enter Zip Code Here...</label>
+            </div>
+           </div>
+         <div class = "col s2 m2">
+            <a href = "index2.html"><Button id = "searchBtn"><i class="material-icons">search</i></Button></a>
+         </div>   
+      </div>
+     <div class = "row">
+      <h2 id = "header2">Drink with your dogs!</h2>
+     </div>
+      <div class = "row">
+       <h3 id = "header3">Enter your zip code here to find breweries in your area along with weather conditions!</h2>
+      </div>
+   </div>
+  </div>
+ </div>  
+ 
+ <!-- start of other page -->
+ <div id = "page2" class = "center-align container" style = "display: none">   
+        <div class = "row">
+         <div class = col-s1-12>
+          <div class = "row">
+           <h2 id = "header">Hops & Hounds</h2>
+          </div> 
+          <div class = "row">
+              <div class = "col s10  m6 offset-m3 offset-s1">
+                <div class="dude card blue-grey darken-1 overflow: scroll">
+                    <div class="card-content white-text">
+                      <span class="card-title"></span> 
+                      <p id = "results"></p>
+                    </div>
+                    <div class="card-action">
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div id = "returnBtn"></div> 
+           <div id = "weather" class = "row weWillSee">
+            <!-- <div id = "weather" class = "col s10  m3 offset-s1"> -->
+              <!-- <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title"></span> 
+                  <p id = "weather"></p>
+                </div>
+                <div class="card-action">
+                </div>
+              </div> -->
+            </div>
+            <!-- <div class = "col s10  m3 offset-m.9 offset-s1">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title"></span> 
+                      <p id = "weatherCard"></p>
+                    </div>
+                    <div class="card-action">
+                    </div>
+                  </div>
+            </div>
+            <div class = "col s10  m3 offset-m.9 offset-s1">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title"></span> 
+                      <p id = "weatherCard"></p>
+                    </div>
+                    <div class="card-action">
+                    </div>
+                  </div>
+            </div>
+            <div class = "col s10  m3 offset-m.9 offset-s1">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title"></span> 
+                      <p id = "weatherCard"></p>
+                    </div>
+                    <div class="card-action">
+                    </div>
+                  </div>
+            </div> --> -->
 
-    <title>Hops & Hounds</title>
-</head>
+           </div>
+         </div>
+        </div>
+       </div> 
 
-<body>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+ <!-- end of body -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
     <script src="script.js"></script>
-</body>
 
+  </body>
 </html>
