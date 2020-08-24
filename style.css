@@ -21,6 +21,10 @@ body {
 .bg-white {
     background-color: white;
 }
+.input-field {
+    margin-right: -23px;
+    margin-left: 40px;
+}
 #header {
     color: white;
     margin-top: 50px;
