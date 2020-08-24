@@ -63,16 +63,18 @@ function beerQuery(searchTerm) {
                 weatherQuery(searchTerm);
                 forecastQuery(searchTerm);
             } else if (searchTerm === undefined) {
+                $("#forecast").html("");
+                $("#weather").html("")
                 var sorry = $("<div>")
-
+                
 
                 sorry.attr("class", "card blue-grey darken-1")
                 var sorry1 = $("<div>")
                 sorry1.attr("class", "card-content white-text")
                 var sorry2 = $("<span>")
-                sorry2.attr("class", "card-title").text("Sorry")
+                sorry2.attr("class", "card-title").text("Sorry :(")
                 var tacoBell = $("<p>")
-                tacoBell.text("It appears there are no eligible breweries in your area :( why not try Taco Bell?")
+                tacoBell.text("It appears there are no eligible breweries in your area. Why not try Taco Bell?")
                 sorry1.append(sorry2, tacoBell)
                 sorry.append(sorry1)
                 $("#results").append(sorry)
