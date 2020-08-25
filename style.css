@@ -52,10 +52,6 @@ h2 {
 .weWillSee {
     margin-top: 75px;
 }
-.dude {
-    overflow: scroll;
-    height: 350px;
-}
 .btn {
     margin-left: 200px;
     width: 70px;
@@ -72,4 +68,14 @@ img {
 }
 .material-icons {
     color: white;
+}
+.carousel .carousel-item {
+    width:300px;
+    margin-top: -75px;
+}
+#counterDiv {
+    margin-top: -170px;
+}
+#returnBtn {
+    margin-top: 55px;
 }
