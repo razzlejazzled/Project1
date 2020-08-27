@@ -6,12 +6,12 @@ $("#searchBtn").on("click", function (e) {
     $("#page1").attr("style", "display: none");
     let returnButton = $("<button>").attr("class", "blue-grey darken-1 btn").append("Back");
     $("#returnBtn").append(returnButton);
-    if ($("#textarea1").val() > 0){
+    if ($("#textarea1").val() > 0) {
         searchTerm = $("#textarea1").val()
         beerQuery(searchTerm);
         $("body").addClass("BarrelBackGround");
         $("body").removeClass("brickBackground");
-    }else{
+    } else {
         beerQuery(searchTerm);
         $("body").addClass("BarrelBackGround");
         $("body").removeClass("brickBackground");
@@ -31,7 +31,10 @@ function beerQuery(searchTerm) {
             // console.log(response)
             returnedBreweries = response
             if (returnedBreweries.length) {
+                var carouselContainer = $("<div>")
+                carouselContainer.attr("class", "carousel")
                 for (let i = 0; i < returnedBreweries.length; i++) {
+                    console.log(returnedBreweries.length);
                     let brewery = returnedBreweries[i];
                     breweryName = brewery.name
                     breweryAdd = brewery.street
@@ -39,6 +42,17 @@ function beerQuery(searchTerm) {
                     breweryPhone = brewery.phone
                     breweryCity = brewery.city
                     brewerySite = brewery.website_url
+                    //Function to activate the carousel
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elems = document.querySelectorAll('.carousel');
+                    });
+                    $(document).ready(function () {
+                        $('.carousel').carousel();
+                    });
+                    //start of the carousel
+                    var carouselItem = $("<a>")
+                    carouselItem.attr("class", "carousel-item")
+                    //start of the card   
                     var card = $("<div>")
                     card.attr("class", "card blue-grey darken-1")
                     var card1 = $("<div>")
@@ -58,15 +72,39 @@ function beerQuery(searchTerm) {
                     brewlink.attr("class", "card-action").text(brewerySite)
                     card1.append(brewName, brewType, brewPhone, brewStreet, brewCity, brewlink)
                     card.append(card1)
-                    $("#results").append(card)
+                    carouselItem.append(card)
+                    carouselContainer.append(carouselItem)
+
+                    $("#results").append(carouselContainer)
                 }
+                $("#counter").html("")
+                $("#counter").append(returnedBreweries.length)
                 weatherQuery(searchTerm);
                 forecastQuery(searchTerm);
             } else if (searchTerm === undefined) {
+                $("#counter").html("0")
                 $("#forecast").html("");
                 $("#weather").html("")
                 var sorry = $("<div>")
-                
+
+
+                sorry.attr("class", "card blue-grey darken-1")
+                var sorry1 = $("<div>")
+                sorry1.attr("class", "card-content white-text")
+                var sorry2 = $("<span>")
+                sorry2.attr("class", "card-title").text("Sorry :(")
+                var tacoBell = $("<p>")
+                tacoBell.text("That is not a valid zip code. Why not try your local Taco Bell?")
+                sorry1.append(sorry2, tacoBell)
+                sorry.append(sorry1)
+                $("#results").append(sorry)
+            }
+            else {
+                $("#counter").html("0")
+                $("#forecast").html("");
+                $("#weather").html("")
+                var sorry = $("<div>")
+
 
                 sorry.attr("class", "card blue-grey darken-1")
                 var sorry1 = $("<div>")
@@ -75,24 +113,6 @@ function beerQuery(searchTerm) {
                 sorry2.attr("class", "card-title").text("Sorry :(")
                 var tacoBell = $("<p>")
                 tacoBell.text("It appears there are no eligible breweries in your area. Why not try Taco Bell?")
-                sorry1.append(sorry2, tacoBell)
-                sorry.append(sorry1)
-                $("#results").append(sorry)
-            }
-            else {
-                $("#forecast").html("");
-                $("#weather").html("")
-                // console.log("No Breweries")
-                var sorry = $("<div>")
-
-
-                sorry.attr("class", "card blue-grey darken-1")
-                var sorry1 = $("<div>")
-                sorry1.attr("class", "card-content white-text")
-                var sorry2 = $("<span>")
-                sorry2.attr("class", "card-title").text("Sorry")
-                var tacoBell = $("<p>")
-                tacoBell.text("It appears there are no eligible breweries in your area :( why not try Taco Bell?")
                 sorry1.append(sorry2, tacoBell)
                 sorry.append(sorry1)
                 $("#results").append(sorry)
@@ -107,13 +127,11 @@ function weatherQuery(searchTerm) {
     })
         .then(function (response) {
             $("#weather").html("")
-            console.log(response)
             returnedWeather = response
             let cityNM = returnedWeather.name
             let temp = returnedWeather.main.temp
             let humid = returnedWeather.main.humidity
             let icon = returnedWeather.weather[0].icon
-            console.log(icon);
             var cardContainer = $("<div>")
             cardContainer.attr("class", "col s10  m3 offset-s1")
             var card = $("<div>")
@@ -169,7 +187,7 @@ function forecastQuery(searchTerm) {
             }
         })
 }
-$("#returnBtn").on("click", function () {
+$("#returnBtn").on("click", function backButton() {
     $("#page2").attr("style", "display: none");
     $("#page1").attr("style", "display: block");
     $("body").addClass("brickBackground");
