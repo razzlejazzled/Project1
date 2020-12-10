@@ -70,3 +70,6 @@ Functionality to customize the weather display to show the forecast at a specifi
 Conclusion
 
 Thank you for your interest in Hops & Hounds, our team is excited to begin this project and looks forward to both the development process, and a successful presentation as we undertake our first dive into collaborative development. 
+
+## Deployment
+Hops & Hounds is deployed [here](https://razzlejazzled.github.io/Project1/) via Github Pages.
