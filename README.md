@@ -1,5 +1,15 @@
-# Project1
+# Project1 (Hops & Hounds)
 
+# Contributors
+### Front End
+Scott Douglas
+Linzy Gilbreath
+
+### Back End Javascript
+Giancarlo Brida
+R.J. Gassner
+
+## Project Proposal:
 USER STORY:
 AS BOTH A BEER LOVER, AND A DOG LOVER
 I WANT AN APP THAT ALLOWS ME TO SEE WHAT BREWERIES ARE DOG FRIENDLY
